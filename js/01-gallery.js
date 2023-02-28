@@ -7,7 +7,7 @@ const galleryContainer = document.querySelector('.gallery');
 const itemsMarkup = createMarkup(galleryItems);
 
 galleryContainer.insertAdjacentHTML('beforeend', itemsMarkup);
-galleryContainer.addEventListener('click', ImgClick);
+galleryContainer.addEventListener('click', imgClick);
 
 
 function createMarkup(items) {
@@ -39,7 +39,7 @@ const instance = basicLightbox.create(
     }
   );
   
-  function ImgClick(e) {
+  function imgClick(e) {
     e.preventDefault();
     const datasetSource = e.target.dataset.source;
     if (!datasetSource) return;
